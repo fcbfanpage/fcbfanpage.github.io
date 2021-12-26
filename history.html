@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCB Fanpage</title>
+    <link rel="stylesheet" href="style.css">
+ 
+   
+    
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="logos.png"></a>
+            <h2>FCB <br> Fanpage</h2>
+
+            <input id="menu" type="checkbox" onclick="showMenu()">
+            <label for="menu"></label>
+            
+            <div class="x" onclick="hideMenu()"></div>
+
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="trophies.html">TROPHIES</a></li>
+                    <li><a href="stadium.html">STADIUM</a></li>
+                    <li><a href="history.html">HISTORY</a></li>
+                    <li><a href="players.html">PLAYERS</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<div class="text-box">
+    <h1>The History of FC Barcelona</h1>
+    <p>Welcome to the fan page of the biggest club in the world,<br> FC Barcelona. <br>#culers</p>
+    <a href="#scroll" class="hero-btn">Read More</a>
+</div>
+
+    </section>
+
+    <!----History---->
+<section id="scroll">
+<section class="history">
+    <h1>The History of FC Barcelona</h1>
+    <img src="gamper.jpg"> <h3>Joan Gamper Founded the Football Club Barcelona</h3>
+    <div class="paragraph"><p>Hans Gamper (Winterthur, Switzerland, 1877 – Barcelona, 1930) <br> arrived in Barcelona in 1898 for professional reasons.
+        During his free time,<br> he played football with a group of friends in Bonanova.
+       <br> In October 1899, Gamper placed an advert in Los Deportes magazine <br> to find players interested in forming a football team.
+      <br> On 29 November, Gamper and eleven other men <br>came together at the Solé Gymnasium to form <br> an association that would bear the <br> city’s name and coat of arms: Futbol Club Barcelona.
+     </p>
+     </div>
+
+     <div class="row reveal">
+         <div class="history-col">
+             <h3>The Best Years In Our History </h3>
+             <p>From the season 2008/09-2010/11 under Josep Guardiola, Blaugrana managed to win 2 Champions League trophies, and a sextuple.
+                And in 2015 Barcelona won the treble under Luis Enrique, the 5th Champions League trophies for the Blaugrana.
+            </p>
+         </div>
+         <div class="history-col">
+             <h3>1st Champions League Trophy</h3>
+             <p>In 1992 Barca won their first Champions League trophy at Wembley, thanks to a single goal from Ronald Koeman.    
+             </p>
+         </div>
+         <div class="history-col">
+            <h3>Ballon d'Or</h3>
+            <p>The greatest international recognition of this came when the FIFA Ballon d'Or nominations in 2010 shortlisted Xavi, Iniesta and Messi for the honour, all three of whom had grown up at La Masia, the residence where young sportspeople of all ages are trained and educated.
+            </p>
+        </div>
+     </div>
+</section>
+</section>
+
+<div class="rows reveal">
+    <div class="col-1">
+        <h2>Ballon d'or</h2>
+        
+        <p>FC Barcelona has won 13 ballon d'or awards. The winners of the award are Luis Suarez (1960), Johan Cruyff (1973, 1974), Hristo Stoichkov (1994), Rivaldo (1999),
+             Ronaldinho (2005), Messi (2009, 2010, 2011, 2012, 2015, 2019, 2021).</p>
+    </div>
+    <div class="col-2">
+        <img src="ballon-removebg.png" class="controller">
+        <div class="color-box"></div>
+        <h3>Leo Messi</h3>
+    </div>
+</div>
+
+<div class="rowss reveal">
+    <div class="coll-1">
+        <img src="last-removebg-preview.png" class="controller">
+        <div class="color-box"></div>
+        <h3>Barça 1992</h3>
+    </div>
+    <div class="coll-2">
+        <h2>1st Champions League Trophy</h2>
+        
+        <p>Barcelona under John Cruyff won the Champions League for the first time in their history in 1992 after beating
+             Sampdoria 1-0 thanks to Ronald Koeman's free kick goal at Wembley Stadium.</p>
+    </div>
+</div>
+
+<section class="footer">
+    <h4>Copyright © 2021 FCB Fanpage. All rights reserved</h4>
+
+</section>
+
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0"
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px"
+    }
+
+</script>
+
+<script type="text/javascript">
+window.addEventListener('scroll', reveal);
+
+function reveal (){
+    var reveals = document.querySelectorAll('.reveal');
+
+    for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+        }
+        else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>

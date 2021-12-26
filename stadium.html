@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCB Fanpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="observers.js"></script>
+   
+    
+</head>
+<body>
+    <section class="subbb-header">
+        <nav>
+            <a href="index.html"><img src="logos.png"></a>
+            <h2>FCB <br> Fanpage</h2>
+
+            
+            <input id="menu" type="checkbox" onclick="showMenu()">
+            <label for="menu"></label>
+            
+            <div class="x" onclick="hideMenu()"></div>
+
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="trophies.html">TROPHIES</a></li>
+                    <li><a href="">STADIUM</a></li>
+                    <li><a href="history.html">HISTORY</a></li>
+                    <li><a href="players.html">PLAYERS</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<div class="text-box">
+    <h1>Camp Nou Stadium</h1>
+    <p>Welcome to the fan page of the biggest club in the world,<br> FC Barcelona. <br>#culers</p>
+    <a href="#scroll" class="hero-btn">Read More</a>
+</div>
+
+    </section>
+
+    <!----History---->
+
+<!--stadium-->
+
+<section id="scroll">
+<section class="stadium">
+    <h1>Camp Nou Stadium</h1>
+    <p>This is the Camp Nou Stadium, a stadium that has a capacity of +90,000 people.</p>
+
+    <div class="row">
+        <div class="stadium-col">
+            <img src="stadium5.jpg">
+            <div class="layer">
+                <h3>Camp Nou</h3>
+            </div>
+        </div>
+        <div class="stadium-col">
+            <img src="stadium6.jpg">
+            <div class="layer">
+                <h3>Camp Nou</h3>   
+            </div>
+    </div>
+
+</section>
+</section>
+<section class="ourstadium reveal">
+
+    <div class="row">
+        <div class="barca-col">
+            <h1>The History of Camp Nou</h1>
+            <p>Camp Nou was built between 1954 and 1957, and officially opened on the 24th of September 1957 with a match between FC Barcelona and a selection of players from the city of Warsaw.
+                The stadium replaced Barcelona’s previous ground Camp de les Corts, which, though it could hold 60,000 supporters, was still too small for the growing support of the club. Camp Nou initially consisted of two tiers that could hold 93,000 spectators. It was first called Estadi del FC Barcelona, but got soon referred to as Camp Nou.
+                in the mid 2000s, the club presented plans for a renovated Camp Nou, designed by Norman Foster, but a lack of funding prevented realisation. The club next started studying a move to a new stadium, but finally decided in 2014 to redevelop the current stadium.
+            </p>
+        </div>
+        <div class="campnou-col">
+            <img src="vin.jpg">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="footer">
+    <h4>Copyright © 2021 FCB Fanpage. All rights reserved</h4>
+
+</section>
+
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0"
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px"
+    }
+
+</script>
+
+<script type="text/javascript">
+window.addEventListener('scroll', reveal);
+
+function reveal (){
+    var reveals = document.querySelectorAll('.reveal');
+
+    for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+        }
+        else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+</script>
+
+
+<!--- Trophies -->
+
+
+
+<!--- Players -->
+
+
+
+
+
+    
+</body>
+</html>
